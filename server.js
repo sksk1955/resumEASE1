@@ -15,7 +15,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // <-- Add this line
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'frontend')));
 app.use(cors());
 app.use(session({
   secret: process.env.SESSION_SECRET || 'your_session_secret',
@@ -130,7 +130,7 @@ app.get('/auth/google',
 app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/index.html' }),
   function(req, res) {
-    res.redirect('/frontend/dash.html'); // or '/index.html' or any page you want
+    res.redirect('/dash.html'); // or '/index.html' or any page you want
   }
 );
 
@@ -140,7 +140,7 @@ app.get('/api/logout', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dash.html'));
+  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 
 const PORT = process.env.PORT || 3000;
