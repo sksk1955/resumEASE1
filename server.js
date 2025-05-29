@@ -78,7 +78,7 @@ passport.deserializeUser(async (id, done) => {
 });
 
 // Routes
-app.post('/https://resumease1-3.onrender.com/api/signup', async (req, res) => {
+app.post('/api/signup', async (req, res) => {
     try {
         const { name, email, password } = req.body;
         const existingUser = await User.findOne({ email });
@@ -95,7 +95,7 @@ app.post('/https://resumease1-3.onrender.com/api/signup', async (req, res) => {
     }
 });
 
-app.post('/https://resumease1-3.onrender.com/api/login', async (req, res) => {
+app.post('/api/login', async (req, res) => {
     try {
         const { email, password } = req.body;
         
@@ -134,7 +134,7 @@ app.get('/auth/google/callback',
   }
 );
 
-app.get('/https://resumease1-3.onrender.com/api/logout', (req, res) => {
+app.get('/api/logout', (req, res) => {
     req.logout();
     res.json({ message: 'Logged out successfully' });
 });
