@@ -140,7 +140,7 @@ app.get('/api/logout', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dash.html'));
+  res.sendFile(path.join(__dirname, 'frontend/dash.html'));
 });
 
 const PORT = process.env.PORT || 3000;
