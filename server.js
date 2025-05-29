@@ -128,9 +128,9 @@ app.get('/auth/google',
 );
 
 app.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: '/login.html' }),
+  passport.authenticate('google', { failureRedirect: '/index.html' }),
   function(req, res) {
-    res.redirect('/index.html'); // or '/login.html' or any page you want
+    res.redirect('/dash.html'); // or '/index.html' or any page you want
   }
 );
 
@@ -140,7 +140,7 @@ app.get('/api/logout', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'dash.html'));
 });
 
 const PORT = process.env.PORT || 3000;

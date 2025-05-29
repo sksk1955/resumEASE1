@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder - Sign Up</title>
-    <!-- Same styles as login.html -->
+    <!-- Same styles as index.html -->
     <style>
     body {
         font-family: 'Inter', sans-serif;
@@ -204,7 +204,7 @@
         </div>
 
         <p class="footer-text">
-            Already have an account? <a href="/login.html">Sign in</a>
+            Already have an account? <a href="/index.html">Sign in</a>
         </p>
     </div>
 
@@ -240,7 +240,7 @@ document.getElementById('signupForm').addEventListener('submit', async function(
         const data = await response.json();
         if (response.ok) {
             showCustomAlert('Signup successful! Redirecting to login...', () => {
-                window.location.href = '/login.html';
+                window.location.href = '/index.html';
             });
         } else {
             if (data.error && data.error.includes('User already exists')) {
