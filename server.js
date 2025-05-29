@@ -42,10 +42,14 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 // Passport Config
+// Replace your Google Strategy configuration with this:
+
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: '/auth/google/callback'
+    callbackURL: process.env.NODE_ENV === 'production' 
+        ? 'https://resumease1-3.onrender.com/auth/google/callback'
+        : 'http://localhost:3000/auth/google/callback'
 },
     async (accessToken, refreshToken, profile, done) => {
         try {
