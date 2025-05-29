@@ -130,7 +130,7 @@ app.get('/auth/google',
 app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/index.html' }),
   function(req, res) {
-    res.redirect('/dash.html'); // or '/index.html' or any page you want
+    res.redirect('/frontend/dash.html'); // or '/index.html' or any page you want
   }
 );
 
