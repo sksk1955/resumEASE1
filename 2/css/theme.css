@@ -1,0 +1,205 @@
+/* ==========================================================================
+   List Styles
+   ========================================================================== */
+
+/* Base list reset */
+ul.nobullet {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Standard bullet styles */
+ul.disc {
+    list-style: disc;
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+ul.circle {
+    list-style: circle;
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+ul.square {
+    list-style: square;
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+/* Custom dash bullets */
+ul.dash {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+ul.dash li {
+    padding-left: 20px;
+    text-indent: -1em;
+}
+
+ul.dash li:before {
+    content: "-";
+    padding-right: 10px;
+}
+
+/* Numbered list styles */
+ul.decimal {
+    list-style: decimal;
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+ul.upper-roman {
+    list-style: upper-roman;
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+ul.lower-roman {
+    list-style: lower-roman;
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+ul.upper-alpha {
+    list-style: upper-alpha;
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+ul.lower-alpha {
+    list-style: lower-alpha;
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+/* ==========================================================================
+   Layout Utilities
+   ========================================================================== */
+
+.corner {
+    border-radius: 0;
+}
+
+/* ==========================================================================
+   Interactive Components
+   ========================================================================== */
+
+/* Toggle Button Group */
+.toggle-button {
+    display: inline-block;
+    float: right;
+}
+
+.toggle-option {
+    display: inline-block;
+    padding: 3px 8px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #222;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.2s ease;
+    font-size: 0.875rem;
+    text-align: center;
+    user-select: none;
+}
+
+.toggle-option:hover {
+    background-color: #333;
+}
+
+.toggle-option.selected {
+    background-color: #E74C3C;
+}
+
+/* Custom Button */
+.custom-button {
+    display: inline-block;
+    padding: 3px 8px;
+    padding-top: 0;
+    padding-bottom: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #4261ee;
+    color: #ffffff;
+    border: none;
+    font-size: 0.875rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    user-select: none;
+}
+
+.custom-button:hover {
+    background-color: #5a75f0;
+}
+
+.custom-button.selected {
+    background-color: #E74C3C;
+}
+
+/* Button Group */
+.btn-group {
+    display: inline-block;
+    padding: 3px 8px;
+    padding-top: 0;
+    padding-bottom: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #ffffff;
+    border: none;
+    font-size: 0.875rem;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    user-select: none;
+}
+
+/* Button Color Variants */
+.btn-violet {
+    background-color: #4574e0;
+}
+
+.btn-violet:hover {
+    background-color: #5a85f2;
+}
+
+.btn-teal {
+    background-color: #16a085;
+}
+
+.btn-teal:hover {
+    background-color: #1abc9c;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+kbd {
+    display: inline-block;
+    padding: 0 3px;
+    background-color: #666;
+    color: #ffffff;
+    border-radius: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    border: 1px solid #555;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .toggle-button {
+        float: none;
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

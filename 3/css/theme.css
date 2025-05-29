@@ -1,0 +1,248 @@
+/* ==========================================================================
+   List Styles
+   ========================================================================== */
+
+/* Base list reset */
+ul.no-bullet {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Standard bullet styles */
+ul.disc {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+ul.circle {
+    list-style-type: circle;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+ul.square {
+    list-style-type: square;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+/* Custom dash bullets */
+ul.dash {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.dash li {
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+ul.dash li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: inherit;
+}
+
+/* Numbered list styles */
+ul.decimal {
+    list-style-type: decimal;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+ul.upper-roman {
+    list-style-type: upper-roman;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+ul.lower-roman {
+    list-style-type: lower-roman;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+ul.upper-alpha {
+    list-style-type: upper-alpha;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+ul.lower-alpha {
+    list-style-type: lower-alpha;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+/* ==========================================================================
+   Layout Utilities
+   ========================================================================== */
+
+.corner {
+    border-radius: 0;
+}
+
+/* ==========================================================================
+   Interactive Components
+   ========================================================================== */
+
+/* Toggle Button Group */
+.toggle-button {
+    display: inline-flex;
+    float: right;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-option {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    user-select: none;
+}
+
+.toggle-option:hover {
+    background-color: #34495e;
+}
+
+.toggle-option.selected {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.toggle-option:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Button */
+.custom-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: #8e44ad;
+    color: #ffffff;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+}
+
+.custom-button:hover {
+    background-color: #9b59b6;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(142, 68, 173, 0.3);
+}
+
+.custom-button.selected {
+    background-color: #e74c3c;
+}
+
+.custom-button:active {
+    transform: translateY(0);
+}
+
+/* Button Group */
+.btn-group {
+    display: inline-flex;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-group > * {
+    border-radius: 0;
+    margin: 0;
+}
+
+.btn-group > *:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Button Color Variants */
+.btn-violet {
+    background-color: #8e44ad;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    user-select: none;
+}
+
+.btn-violet:hover {
+    background-color: #9b59b6;
+}
+
+.btn-teal {
+    background-color: #16a085;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    user-select: none;
+}
+
+.btn-teal:hover {
+    background-color: #1abc9c;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+kbd {
+    display: inline-block;
+    padding: 0.125rem 0.375rem;
+    background-color: #666666;
+    color: #ffffff;
+    border-radius: 0.1875rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.875em;
+    font-weight: 600;
+    border: 1px solid #555555;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .toggle-button {
+        float: none;
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .toggle-option,
+    .custom-button,
+    .btn-violet,
+    .btn-teal {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+}
